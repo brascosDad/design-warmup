@@ -1,12 +1,14 @@
 # Design Warmup
 
-A two-minute design judgment exercise, packaged as a Claude skill.
+A five-minute design judgment exercise, packaged as a Claude skill.
 
 You get an invented product scenario — context, a flow diagram, one UX principle, three facts, and a constraint. You commit to **two questions you'd ask and two actions you'd take**. Then a board comes back with the strongest questions and actions, and any of yours that hit are marked.
 
 No Figma. No deliverable. No score.
 
 The skill it trains is the one that usually gets skipped: deciding what the problem actually is before solving anything.
+
+Includes a bank of 30 scenarios, so there's a new one every day of the month.
 
 ---
 
