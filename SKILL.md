@@ -5,7 +5,7 @@ description: Run a short design judgment exercise — serve an invented product 
 
 # Design Warmup
 
-A two-minute exercise for practicing product judgment. No Figma, no deliverable, no wireframes. The user gets a scenario and commits to **two questions they'd ask and two actions they'd take**. Then a board reveals the strongest questions, with any of theirs that hit marked.
+A five-minute exercise for practicing product judgment. No Figma, no deliverable, no wireframes. The user gets a scenario and commits to **two questions they'd ask and two actions they'd take**. Then a board reveals the strongest questions, with any of theirs that hit marked.
 
 The skill it trains is the one that gets skipped: deciding what the problem actually is before solving anything.
 
@@ -14,7 +14,7 @@ The skill it trains is the one that gets skipped: deciding what the problem actu
 1. Pick a seed from the scenario bank (`references/scenarios.md`), using the selection rule in "Scenario bank" below.
 2. Serve the scenario — five fields plus a flow diagram, **in the order of operations below**.
 3. The user commits to two questions and two actions. Wait for them. Do not answer your own scenario.
-4. Reveal the board — six ordered questions plus a dud, four ordered actions. Mark any of theirs that hit. Then the three-part close.
+4. Reveal the board — six ordered questions plus a decoy, four ordered actions. Mark any of theirs that hit. Then the three-part close.
 5. Optional overtime: answer their questions in character as the world, and let them keep pulling.
 
 ### Order of operations when serving — no exceptions
@@ -28,7 +28,7 @@ The most common failure is opening with a tool call: the diagram lands at the to
 
 The ask, stated exactly this way: **two questions you'd ask, two actions you'd take.** No ranking, no order required. Some people will say their second action depends on what the first question turns up — that's a good answer, not a rule violation. Accept it.
 
-Base game is two minutes. Overtime runs as long as it's interesting.
+Base game is five minutes. Overtime runs as long as it's interesting.
 
 ## Scenario modes — rotate these
 
@@ -189,7 +189,7 @@ Four actions rather than six because a working constraint leaves genuinely fewer
 
 Second check: if every action on the board is a study, the scenario is a discovery scenario whether you meant it or not. Switch modes or hand over findings.
 
-The dud belongs on the questions side only. The actions list is short enough that a dud would distort it.
+The decoy belongs on the questions side only. The actions list is short enough that a decoy would distort it.
 
 **The board is ordered.** In each group, slot 1 is the keystone: the question or move that unlocks the most given the constraint. Order the rest by how much they open up. Number the slots on the board.
 
@@ -198,10 +198,10 @@ The dud belongs on the questions side only. The actions list is short enough tha
 This construction is circular, and the rule below is what keeps it honest.
 
 - The slots are ordered by what they unlock, but the user is never scored. Hitting any slot is a hit; hitting none is not a failure.
-- **One slot is a dud** — a question that sounds smart and isn't. Usually one that jumps straight to a fix, or one the constraint already ruled out. Say why. Naming the dud yourself is worth more than the top slot, so if the user calls it, say so.
+- **One slot is a decoy** — the move a stakeholder in the scenario has already endorsed, usually their proposed fix. It isn't a dumb question; it's a borrowed one, and that's what makes it hard to see. Say in one clause what in the evidence or the constraint undercuts it, pointing at the scenario, never at the user. Catching the decoy is worth more than any hit, so if the user calls it, say so.
 - **If a question or action of theirs isn't on the board and it's good, add it and say so.** This matters more than it looks. A board can only contain what its author thought of, so a genuinely novel angle would otherwise read as a miss. Adding it is the release valve. Discuss it, put it on the board by name, and say what it opens up that the original six didn't.
 - Common is not the same as compelling. Rare questions are often the best ones. Say so when it's true.
-- **The dud belongs in the solo version only.** If these boards are ever built from other people's public answers, drop the dud — labeling a real person's contribution as the bad one is exactly the feeling this exercise is built to avoid.
+- **The decoy belongs in the solo version only.** If these boards are ever built from other people's public answers, drop the decoy — labeling a real person's contribution as the decoy is exactly the feeling this exercise is built to avoid.
 
 ### Delivering the board
 
@@ -209,10 +209,10 @@ This construction is circular, and the rule below is what keeps it honest.
 
 Two labeled groups, QUESTIONS then ACTIONS, each entry its own card:
 
-- **Every entry** carries its slot number (1–6, 1–4) in muted text on the left; the dud carries ×.
+- **Every entry** carries its slot number (1–6, 1–4) in muted text on the left; the decoy carries ×.
 - **A hit** — accent tint background, accent border, plus a caption line beneath in the accent text color naming which answer landed ("your first question", "your prototype"). Four words, not a sentence.
 - **A miss** — neutral card surface, standard border. No marking of any kind.
-- **The dud** — danger tint background and border, set slightly apart from the six, with a one-clause reason beneath it in the danger text color.
+- **The decoy** — danger tint background and border, set slightly apart from the six, with a one-clause reason beneath it in the danger text color.
 - **An added entry** — accent tint like a hit, captioned "added to the board".
 
 Same card spec as the flow: 2px border all round, 12px radius, roughly 12px by 14px padding, title 15px, caption 13px. Cards stacked full width, left-aligned text.
@@ -287,7 +287,7 @@ If the user wants to keep going past their two, let them. The two-and-two ask is
 
 Always rename the invented company and people, change the figures, and rewrite every sentence fresh. The seed is a skeleton, never copy to paste.
 
-**Build from the seed, don't recite it.** The seed gives the plant, the keystone slots and the pattern. You still write all five fields, build the full board (six questions, a dud, four actions) and draw the flow to the rules in this file.
+**Build from the seed, don't recite it.** The seed gives the plant, the keystone slots and the pattern. You still write all five fields, build the full board (six questions, a decoy, four actions) and draw the flow to the rules in this file.
 
 ### Rotate the problem shape, not the industry
 
@@ -333,6 +333,6 @@ Track which shape was used and rotate deliberately:
 
 **The constraint** — Legal has ruled the app can never state or imply a medical assessment. The estimate copy is locked behind a six-week review.
 
-*Board:* Why are owners who see a low estimate not coming? · What do owners think the estimate means? · Which pets are bouncing — is it concentrated? · What are techs overriding, and on what signal? · Can owners say what's actually wrong? · Does the flow have to decide before anyone's been seen? **Dud:** "Should we rewrite the estimate copy?" — jumps to a fix, and the constraint already ruled it out.
+*Board:* Why are owners who see a low estimate not coming? · What do owners think the estimate means? · Which pets are bouncing — is it concentrated? · What are techs overriding, and on what signal? · Can owners say what's actually wrong? · Does the flow have to decide before anyone's been seen? **Decoy:** "How do we get more owners through the door?" — the PM's marketing reading; the drop-off is concentrated among owners shown a low estimate.
 
 The last one questions the flow itself, and it's the only one the constraint doesn't block. Questions about the shape of the flow are consistently underrated — surface them.

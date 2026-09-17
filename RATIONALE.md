@@ -1,6 +1,6 @@
 # Rationale
 
-The exercise: read a made-up product scenario, then commit to two questions you'd ask and two actions you'd take. Two minutes. No Figma, no deliverable. A board comes back with the strongest questions and actions, and any of yours that hit are marked.
+The exercise: read a made-up product scenario, then commit to two questions you'd ask and two actions you'd take. Five minutes. No Figma, no deliverable. A board comes back with the strongest questions and actions, and any of yours that hit are marked.
 
 Everything below is a decision made deliberately, usually after a version that didn't work.
 
@@ -82,13 +82,13 @@ The cost is circularity — a board can only contain what its author thought of,
 
 ---
 
-## The dud
+## The decoy
 
-One entry is a question that sounds smart and isn't — usually one that jumps to a fix, or one the constraint already ruled out. Often it's the one a stakeholder in the scenario has already endorsed, which is what makes it seductive.
+One entry is a decoy: the move a stakeholder in the scenario has already endorsed. It isn't a bad question. It's a borrowed one, and that's what makes it hard to see. Someone with authority has already said it out loud, so it feels like progress. The evidence or the constraint quietly undercuts it.
 
 It's there because that failure has nothing to do with knowledge. Six good questions don't make the pattern visible. Labeling one does.
 
-I'm not certain about it. It works alone, where nobody has to own the dud but you. It would not work on a public board built from other people's answers — marking a real person's contribution as the bad one is exactly the feeling this thing exists to avoid. Solo only. If it doesn't earn its place, cut it.
+I'm not certain about it. It works alone, where nobody has to own the decoy but you. It would not work on a public board built from other people's answers — marking a real person's contribution as the bad one is exactly the feeling this thing exists to avoid. Solo only. If it doesn't earn its place, cut it.
 
 ---
 

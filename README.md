@@ -2,7 +2,7 @@
 
 A five-minute design judgment exercise, packaged as a Claude skill.
 
-You get an invented product scenario — context, a flow diagram, one UX principle, three facts, and a constraint. You commit to **two questions you'd ask and two actions you'd take**. Then a board comes back with the strongest questions and actions, and any of yours that hit are marked.
+You get an invented product scenario — context, a flow diagram, one UX principle, three facts, and a constraint. You commit to **two questions you'd ask and two actions you'd take**. Then a board comes back with the strongest questions and actions, in order of what they unlock, and any of yours that hit are marked.
 
 No Figma. No deliverable. No score.
 
@@ -30,7 +30,9 @@ Includes a bank of 30 scenarios, so there's a new one every day of the month.
 
 > Two questions you'd ask, two actions you'd take.
 
-Then the board. One of its six entries is a dud — a question that sounds smart and isn't. Naming the dud yourself is worth more than the top slot.
+Then the board: six questions and four actions, in order of what they unlock, plus one decoy. The decoy is the move a stakeholder has already endorsed. It isn't a bad question, it's a borrowed one, and catching it is worth more than any hit.
+
+The round closes in three parts: your strongest hit, the top slot you didn't get and why it matters, and a named pattern to carry into real work.
 
 ---
 
@@ -55,15 +57,16 @@ Then ask for a design warmup, a design exercise, or a scenario to think through.
 | File | What it is |
 |---|---|
 | [`SKILL.md`](SKILL.md) | The skill — modes, the five scenario fields, the flow spec, the board, the rules |
+| [`references/scenarios.md`](references/scenarios.md) | 30 scenario seeds, one for each day of the month |
 | [`RATIONALE.md`](RATIONALE.md) | Why it's shaped this way, and what got cut. Read this one if you only read one. |
 
-`SKILL.md` is a generator, not a set of examples. That's the reason it's a skill and not a blog post — you get the thing that makes scenarios, not the four I happened to write.
+`SKILL.md` is a generator, not a set of examples. The bank gives it 30 starting points, and the rules turn each one into a fresh round. That's why it's a skill and not a blog post.
 
 ---
 
 ## Take it and change it
 
-Fork it, rewrite the rules, cut the dud, add your own problem shapes. If you find a shape that works better than mine, I'd like to hear about it — open an issue.
+Fork it, rewrite the rules, cut the decoy, add your own scenarios and problem shapes. If you find a shape that works better than mine, I'd like to hear about it — open an issue.
 
 Built by [Ernest Leeson](https://ernestleeson.com).
 
