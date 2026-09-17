@@ -11,10 +11,20 @@ The skill it trains is the one that gets skipped: deciding what the problem actu
 
 ## The loop
 
-1. Serve one scenario — five fields plus a flow diagram.
-2. The user commits to two questions and two actions. Wait for them. Do not answer your own scenario.
-3. Reveal the board — six questions plus a dud. Mark any of theirs that hit.
-4. Optional overtime: answer their questions in character as the world, and let them keep pulling.
+1. Pick a seed from the scenario bank (`references/scenarios.md`), using the selection rule in "Scenario bank" below.
+2. Serve the scenario — five fields plus a flow diagram, **in the order of operations below**.
+3. The user commits to two questions and two actions. Wait for them. Do not answer your own scenario.
+4. Reveal the board — six ordered questions plus a dud, four ordered actions. Mark any of theirs that hit. Then the three-part close.
+5. Optional overtime: answer their questions in character as the world, and let them keep pulling.
+
+### Order of operations when serving — no exceptions
+
+1. Write the **Context** paragraph as plain text. This is the first thing in the reply.
+2. Write the **The flow** header.
+3. Only now call any diagram tool (including any silent setup call it needs). No tool call of any kind happens before the Context text exists.
+4. After the diagram renders, write the remaining fields in full: UX principle, the timeframe section (colleague's position plus three facts), the constraint, and the ask.
+
+The most common failure is opening with a tool call: the diagram lands at the top, Context never gets written, and the fields after the diagram get thinned out because the scenario already feels delivered. Before ending the turn, check that all five fields are present.
 
 The ask, stated exactly this way: **two questions you'd ask, two actions you'd take.** No ranking, no order required. Some people will say their second action depends on what the first question turns up — that's a good answer, not a rule violation. Accept it.
 
@@ -55,7 +65,7 @@ Two questions you'd ask, two actions you'd take.
 
 Then stop and wait. Do not answer your own scenario.
 
-**Write the Context paragraph before you draw anything.** If a diagram tool is used, it renders at the point it is called, so calling it first puts the picture above the text and leaves the flow section saying "above." Text first, then the diagram, then keep going. Never open with the diagram.
+**Write the Context paragraph before you draw anything** (see Order of operations above). If a diagram tool is used, it renders at the point it is called, so calling it first puts the picture above the text and leaves the flow section saying "above." Text first, then the diagram, then keep going. Never open with the diagram.
 
 The principle sits *after* the flow on purpose — it means more once the reader can see what it is describing.
 
@@ -181,11 +191,13 @@ Second check: if every action on the board is a study, the scenario is a discove
 
 The dud belongs on the questions side only. The actions list is short enough that a dud would distort it.
 
-**Say what the board is, at the reveal.** These are the questions the scenario was built around — not crowd data, not the six best questions a designer could ask. Building a scenario means planting the evidence that reveals the problem: the branch where people fall out, the metric measured on the wrong population, the threshold sitting in plain sight. Each planted thing is a board slot. Being upfront about that tells the user what a miss actually means — not a failure to think well, just a plant they didn't spot.
+**The board is ordered.** In each group, slot 1 is the keystone: the question or move that unlocks the most given the constraint. Order the rest by how much they open up. Number the slots on the board.
+
+**Say what the board is, at the reveal.** Open with one line: "Here's the board. These are the questions and moves the scenario was built around, listed in order of what they unlock. The first slot in each group matters most."  These are the questions the scenario was built around — not crowd data, not the six best questions a designer could ask. Building a scenario means planting the evidence that reveals the problem: the branch where people fall out, the metric measured on the wrong population, the threshold sitting in plain sight. Each planted thing is a board slot. Being upfront about that tells the user what a miss actually means — not a failure to think well, just a plant they didn't spot.
 
 This construction is circular, and the rule below is what keeps it honest.
 
-- The six are not ranked against each other and the user's answers are not scored. Hitting any of them is a hit; hitting none is not a failure.
+- The slots are ordered by what they unlock, but the user is never scored. Hitting any slot is a hit; hitting none is not a failure.
 - **One slot is a dud** — a question that sounds smart and isn't. Usually one that jumps straight to a fix, or one the constraint already ruled out. Say why. Naming the dud yourself is worth more than the top slot, so if the user calls it, say so.
 - **If a question or action of theirs isn't on the board and it's good, add it and say so.** This matters more than it looks. A board can only contain what its author thought of, so a genuinely novel angle would otherwise read as a miss. Adding it is the release valve. Discuss it, put it on the board by name, and say what it opens up that the original six didn't.
 - Common is not the same as compelling. Rare questions are often the best ones. Say so when it's true.
@@ -197,6 +209,7 @@ This construction is circular, and the rule below is what keeps it honest.
 
 Two labeled groups, QUESTIONS then ACTIONS, each entry its own card:
 
+- **Every entry** carries its slot number (1–6, 1–4) in muted text on the left; the dud carries ×.
 - **A hit** — accent tint background, accent border, plus a caption line beneath in the accent text color naming which answer landed ("your first question", "your prototype"). Four words, not a sentence.
 - **A miss** — neutral card surface, standard border. No marking of any kind.
 - **The dud** — danger tint background and border, set slightly apart from the six, with a one-clause reason beneath it in the danger text color.
@@ -210,28 +223,42 @@ The reveal is where this exercise gets bloated. Hard limits:
 
 - **Each board entry is one line.** Around a dozen words. If it needs a clause to explain itself, the entry is doing two jobs.
 - **Captions are four words**, not sentences.
-- **After the board, three short items maximum**, in this order, two lines each: an added entry if there is one, the one thread you'd have pulled, then the named pattern. Nothing else.
+- **After the board, exactly three items**, in the fixed format under "The close" below. Nothing else.
 - **Never re-explain the scenario.** They just read it.
 
 Reasoning about what an entry was poking at is welcome — it's the part that makes the next round better — but it belongs in one sentence attached to the pattern, not spread across the board.
 
-## Close on a takeaway, not a critique
+## The close — three parts, this format
 
-End every round with **one named pattern** the user can carry into real work. Not what they missed — a handle for the thing the scenario was built to teach.
+Each part is a bold lead, then one or two sentences. Keep the whole close to about one phone screen.
 
-Two lines. The name, then how to spot it next time.
+**1. Your hit.** Lead: **Your hit: [which answer].** (or **Your hits: …** if several). Name their strongest answer that landed and say in one clause *why it mattered*: the plant it found, the principle it tested, or the assumption it refused. Specific praise is welcome here; it is recognition, not a score.
+- If the answer landed on the board as a new entry, say so plainly: "Good question, and not one the scenario planted. Added to the board." Then one clause on what it opens up.
+- If nothing hit, lead with **Closest to the board: [their answer].** Say what it was reaching toward and which slot it was near, without framing it as a miss.
+- If one of their moves bumps into the constraint, add one short practical note ("present it as a proposal, not something you've tested"). One sentence, never a critique.
 
-> **Two populations, one number.** When a metric compares people who did X against people who didn't, check whether X selected them before you credit X. Spot it by asking who *couldn't* have been in the winning group.
+**2. The top slot you didn't get.** Lead: **Question I'd have added (#1):** or **Action I'd have taken (#1):**, always saying which it is. Then the exact wording in quotes. Then **Why:** one or two sentences on what it unlocks *given the constraint*.
+- Talk about slot #1 of whichever group they missed. If they missed both, pick the one the constraint makes more interesting.
+- If they hit #1 in both groups, use slot #2 instead and label it (#2).
 
-Name it whether or not the user found it. It's the part of the exercise that outlives the scenario — scenario facts expire, a named pattern travels.
+**3. The named pattern.** Lead: the pattern name in bold, then how to spot it next time. Two sentences.
 
-Anything you'd have pulled that they didn't goes just before this, in **two lines maximum**. Long paragraphs of what-you-missed turn the ending into the critique this exercise exists to avoid, regardless of how it's worded.
+> **Two populations, one number.** When a metric compares people who did X against people who didn't, check whether X selected them before you credit X. To spot it, ask who *couldn't* have been in the winning group.
 
-The named pattern is the right place for one sentence of insight about what the board was probing — that sentence is what the user takes into the next round. One sentence, not a paragraph.
+Name the pattern whether or not the user found it. Scenario facts expire; a named pattern travels.
+
+### Reference close
+
+> **Your hits: both first slots.** Your calendar question and your prototype both ask whether approval belongs at booking at all, which is the gap the principle points to. One note: the partners are off-limits until spring, so present the prototype as a proposal, not something you've tested.
+>
+> **Question I'd have added (#2):** *"Is the agent slow, or waiting on something the app can't see?"*
+> Why: Thursday comes down to choosing between the two readings, and this decides which one you present. The interview finding already answers it, so it needs no new research.
+>
+> **The approval is in the wrong place.** When requests keep stalling at a sign-off, check whether that sign-off could happen once, earlier, when the options are set. To spot it, ask whether the approver ever saw the options before the user picked one.
 
 ## Never grade
 
-Do not critique the user's answers after they've committed — the board is a comparison, not a verdict. If you noticed a thread they didn't, offer it after the board as "here's the one I'd have pulled," the way a colleague compares notes walking out of a meeting.
+Do not critique the user's answers after they've committed — the board is a comparison, not a verdict. Threads they didn't pull go in part 2 of the close, labeled and quoted, the way a colleague compares notes walking out of a meeting.
 
 ## Overtime
 
@@ -244,7 +271,25 @@ If the user wants to keep going, answer their question **as the world** rather t
 
 If the user wants to keep going past their two, let them. The two-and-two ask is a floor that gets them committed, not a cap on the conversation.
 
-## Rotate the problem shape, not the industry
+## Scenario bank — how to pick
+
+`references/scenarios.md` holds 30 seeds, each a different industry, mode and problem shape. Read it before serving. Without it, runs drift back to the same few defaults (approvals, cutoffs, queues), and the user notices within a week.
+
+**Selection rule.** You carry nothing between sessions, so pick by date:
+- Use today's date (from context, or a time tool if one exists) and take the day of the month as the seed number. On the 31st, pick any seed not served in this conversation.
+- Asked for another round in the same conversation → the next seed number, wrapping 30 → 1. Never serve a seed twice in one conversation.
+- If the user names an industry, pick the closest seed in it, or build a new one to the same standard.
+
+**Variation after a month.** The same seed comes back on the same date each month. Keep its shape and industry, and change the surface using the month number (1–12) mod 3:
+- **0:** as written.
+- **1:** new colleague name and role, holding the opposite reading of the evidence; swap which fact is the win.
+- **2:** switch the mode (discovery → interpretation → commitment → discovery) and write a new constraint that fits the new mode.
+
+Always rename the invented company and people, change the figures, and rewrite every sentence fresh. The seed is a skeleton, never copy to paste.
+
+**Build from the seed, don't recite it.** The seed gives the plant, the keystone slots and the pattern. You still write all five fields, build the full board (six questions, a dud, four actions) and draw the flow to the rules in this file.
+
+### Rotate the problem shape, not the industry
 
 Settings are unlimited. Distinct problem shapes are maybe thirty or forty, and the shape is what the user is actually practicing. Serving the same shape in three different industries makes someone very good at one thing while feeling like general practice.
 
@@ -262,6 +307,9 @@ Track which shape was used and rotate deliberately:
 
 ## Failure modes to avoid
 
+- **Opening with the diagram.** See Order of operations. Context text comes first, always.
+- **Repeating a scenario.** Use the bank and the selection rule.
+- **A vague close.** Part 2 always says question or action, quotes the exact wording, and says why.
 - **Serving the scenario and the board together.** The commitment has to happen first or there's no exercise.
 - **Letting the constraint go unused.** If nothing in the scenario makes an obvious action hard, the constraint is decoration. It should change what the user can actually do, not just what they'd like to know.
 - **Making the numbers all bad.** If nothing is working, the answer is obvious. There must be a real win to protect.
