@@ -22,7 +22,7 @@ The skill it trains is the one that gets skipped: deciding what the problem actu
 1. Write the **Context** paragraph as plain text. This is the first thing in the reply.
 2. Write the **The flow** header.
 3. Only now call any diagram tool (including any silent setup call it needs). No tool call of any kind happens before the Context text exists.
-4. After the diagram renders, write the remaining fields in full: UX principle, the timeframe section (colleague's position plus three facts), the constraint, and the ask.
+4. After the diagram renders, write the remaining fields in full: UX principle, the timeframe section (one-line handover, three facts, then the colleague's reading), the constraint, and the ask.
 
 The most common failure is opening with a tool call: the diagram lands at the top, Context never gets written, and the fields after the diagram get thinned out because the scenario already feels delivered. Before ending the turn, check that all five fields are present.
 
@@ -55,7 +55,7 @@ All five fields, every time, in this order, with these headers.
 [One line, stated plainly.]
 
 **[Timeframe — "Tuesday", "What's already known", "The decision, already made"]**
-[Who is handing this over and what they think it means, then three facts.]
+[One line on who handed this over. Then three facts. Then what they think the facts mean.]
 
 **The constraint**
 [One or two lines. Structural.]
@@ -106,9 +106,11 @@ Nobody hands a designer a framed problem. They hand you a set of numbers and som
 
 - Wrong: "The team's OKR is to reduce time-to-exam." Now everyone optimizes the same thing.
 - Wrong: "This landed on your desk Monday." No one is attached to it; it reads as a slide.
-- Right: "Your PM sends you these numbers. She thinks the picker is working and the drop-off is a marketing problem. You're not sure."
+- Right: "Your PM sends these over." Then the three facts. Then: "She thinks the picker is working and the drop-off is a marketing problem. You're not sure."
 
 A named person with a stated position gives the user something to agree or disagree with, which activates more than any metric. It also keeps the strongest first move available: *is this even the problem?*
+
+**Facts before readings.** The handover line names who sent it and nothing else; the colleague's interpretation comes after the numbers, never before. A reading placed first asks the user to evaluate a take on evidence they haven't seen, and it frames the facts before they're read. Numbers first lets the user form their own impression, then meet the position they're being asked to agree or disagree with. When two colleagues hold opposing readings, both go after the facts.
 
 ## The flow diagram
 
@@ -193,7 +195,7 @@ The decoy belongs on the questions side only. The actions list is short enough t
 
 **The board is ordered.** In each group, slot 1 is the keystone: the question or move that unlocks the most given the constraint. Order the rest by how much they open up. Number the slots on the board.
 
-**Say what the board is, at the reveal.** Open with one line: "Here's the board. These are the questions and moves the scenario was built around, listed in order of what they unlock. The first slot in each group matters most."  These are the questions the scenario was built around — not crowd data, not the six best questions a designer could ask. Building a scenario means planting the evidence that reveals the problem: the branch where people fall out, the metric measured on the wrong population, the threshold sitting in plain sight. Each planted thing is a board slot. Being upfront about that tells the user what a miss actually means — not a failure to think well, just a plant they didn't spot.
+**Say what the board is, at the reveal.** Open with one line: "Here's the board. These are the questions and moves the scenario was built around, listed in order of what they unlock. The first slot in each group matters most." These are the questions the scenario was built around — not crowd data, not the six best questions a designer could ask. Building a scenario means planting the evidence that reveals the problem: the branch where people fall out, the metric measured on the wrong population, the threshold sitting in plain sight. Each planted thing is a board slot. Being upfront about that tells the user what a miss actually means — not a failure to think well, just a plant they didn't spot.
 
 This construction is circular, and the rule below is what keeps it honest.
 
@@ -293,7 +295,7 @@ Always rename the invented company and people, change the figures, and rewrite e
 
 Settings are unlimited. Distinct problem shapes are maybe thirty or forty, and the shape is what the user is actually practicing. Serving the same shape in three different industries makes someone very good at one thing while feeling like general practice.
 
-Track which shape was used and rotate deliberately:
+The bank already spreads shapes across the month, so the date-based pick does the rotating. When building a scenario outside the bank (a named industry, or overtime), pick a shape that differs from anything served earlier in this conversation:
 
 - A system took over a human judgment; the target metric improved and the cost landed where the metric can't see it
 - Two users share one interface and want opposite things
@@ -322,14 +324,16 @@ Track which shape was used and rotate deliberately:
 
 **Context** — A chain of pet urgent care clinics has a check-in app. You check in from your phone before driving over, pick your pet's symptoms from a list, and the app shows an urgency estimate.
 
-**UX principle** — Urgency is judged by the clinic, never by the owner.
-
 **The flow** — Pre-check-in → symptom picker (shows estimate) → *branch*: arrives and waits for tech triage, exam, discharge / never arrives, goes elsewhere.
 
-**The numbers** — Your PM sends these over. She thinks the picker is working and the drop-off is a marketing problem. You're not sure.
+**UX principle** — Urgency is judged by the clinic, never by the owner.
+
+**Tuesday** — Your PM sends these over.
 - Time to exam for true emergencies is down 20%
 - Among owners shown a low urgency estimate, the share who never arrive has roughly doubled
 - Two of those pets turned up at a competitor's overnight ER the same week
+
+She thinks the picker is working and the drop-off is a marketing problem. You're not sure.
 
 **The constraint** — Legal has ruled the app can never state or imply a medical assessment. The estimate copy is locked behind a six-week review.
 

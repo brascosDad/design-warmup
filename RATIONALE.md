@@ -40,9 +40,11 @@ I got this wrong twice before it worked.
 
 - "The team's OKR is to reduce time-to-exam" tells you what to optimize. Now everyone answers the same question.
 - "This landed on your desk Monday" has nobody attached to it. It reads as a slide, not a job.
-- "Your PM sends you these numbers. She thinks the picker is working and the drop-off is a marketing problem. You're not sure." — this one works.
+- "Your PM sends these over," then the numbers, then "She thinks the picker is working and the drop-off is a marketing problem. You're not sure." — this one works.
 
 A named person with a stated position gives you something to disagree with. It also keeps the best first move available: *is this even the problem?*
+
+The order matters too. Putting the opinion ahead of the numbers had you weighing someone's take on evidence you hadn't read yet, and it framed the facts before you got to them. So the numbers come first and the reading follows. You form your own impression, then meet the position you're being asked to agree or disagree with.
 
 ---
 
@@ -92,13 +94,31 @@ I'm not certain about it. It works alone, where nobody has to own the decoy but 
 
 ---
 
-## End on a pattern, not a correction
+## The board is ordered
 
-Every round closes with one named pattern and how to spot it next time. Two lines.
+Slot 1 in each group is the keystone: the question or move that unlocks the most, given the constraint. The rest follow in order of what they open up.
+
+An unordered board treats every entry as equal, and they aren't. Some questions open the whole scenario and some tidy up a corner. Ordering it tells you where the weight was without turning it into a score. Any hit is still a hit.
+
+---
+
+## The close has three parts
+
+After the board, the round closes in three parts, always in the same order.
+
+**Your hit first.** The strongest thing you said that landed, and why it mattered: the plant it found, the principle it tested, the assumption it refused. If nothing landed, the closest one, and what it was reaching toward. You committed to something, so you hear about it before anything else.
+
+**Then the top slot you didn't get.** Question or action, said plainly which. The exact wording, then why it unlocks something under this constraint. If you got the top slot in both groups, it's the second one instead.
+
+An earlier version ended with a loose line or two about what else I'd have pulled. It was too vague to act on. Was it a question or a move? What would it have opened? A thread you can't pick up isn't worth handing over. Naming one entry, quoting it, and saying why turns it into something to try next time. It reads like a colleague comparing notes on the way out of a meeting, not a list of what you missed.
+
+**Last, a named pattern.** One pattern and how to spot it next time. Two lines.
 
 > **Two populations, one number.** When a metric compares people who did X against people who didn't, check whether X selected them before you credit X. Spot it by asking who *couldn't* have been in the winning group.
 
-The name is the point. Scenario facts expire the moment you close the app; a named pattern travels into a real meeting. Anything you'd have pulled that the user didn't goes right before this, in two lines — long paragraphs of what-you-missed turn the ending into the critique the whole thing is built to avoid, no matter how kindly they're worded.
+The name is the point. Scenario facts expire the moment you close the app; a named pattern travels into a real meeting.
+
+The whole close fits on about one phone screen. Long paragraphs of what-you-missed turn the ending into the critique the whole thing is built to avoid, no matter how kindly they're worded.
 
 ---
 
@@ -109,6 +129,8 @@ Most scenarios have a gap planted in them. A metric that's named but never defin
 Noticing that a term was never defined is one of the most valuable questions anyone asks in a real meeting, and it only gets practiced if something is actually missing.
 
 The line I hold: **undefined, not incorrect.** A wrong fact makes you distrust every other fact, and then you stop reasoning and start proofreading. A gap produces the same useful head-scratch without poisoning the rest.
+
+---
 
 ## Three facts, not five
 
@@ -180,9 +202,19 @@ Settings are unlimited. Problem shapes are maybe thirty or forty, and the shape 
 
 ---
 
+## Thirty seeds, one for each day
+
+Left to generate freely, the scenarios repeated. Insurance-claim auto-approval and ordering cutoffs kept coming back. A generator with no memory falls back on its favorite examples, and you notice fast.
+
+So there's a bank of thirty seeds, each a different industry, mode and problem shape: showing requests in real estate, self-checkout alerts at a grocery store, bus tracking for a school district. A seed is a skeleton. It has the planted gap, the keystone question and action, and the pattern. The skill still writes every field fresh, renames everyone and changes the numbers.
+
+The pick goes by date: the day of the month is the seed number. Claude remembers nothing between sessions, so the calendar handles rotation. When a seed comes back the next month, its surface changes: a colleague with the opposite reading, a different mode, a new constraint. The shape stays the same, because the shape is what you're practicing.
+
+---
+
 ## How it was built
 
-The scenarios are generated with Claude from the template in `SKILL.md`. That's the point of publishing it as a skill rather than a blog post — you get the generator, not my examples.
+The scenarios are generated with Claude from the template in `SKILL.md`, starting from a seed in the bank. That's the point of publishing it as a skill rather than a blog post — you get the generator, not my examples.
 
 They're invented. Fictional companies, fictional numbers. Partly so nobody's real product gets discussed with made-up metrics attached, and partly because a scenario tuned to teach one thing beats a real one that's messy in less useful ways.
 

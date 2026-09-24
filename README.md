@@ -20,11 +20,13 @@ Includes a bank of 30 scenarios, so there's a new one every day of the month.
 
 **UX principle** — Urgency is judged by the clinic, never by the owner.
 
-**Tuesday** — Your PM sends these over. She thinks the picker is working and the drop-off is a marketing problem. You're not sure.
+**Tuesday** — Your PM sends these over.
 
 - Time to exam for true emergencies is down 20%
 - Among owners shown a low urgency estimate, the share who never arrive has roughly doubled
 - Two of those pets turned up at a competitor's overnight ER the same week
+
+She thinks the picker is working and the drop-off is a marketing problem. You're not sure.
 
 **The constraint** — Legal has ruled the app can never state or imply a medical assessment. The estimate copy is locked behind a six-week review.
 
