@@ -11,7 +11,7 @@ The skill it trains is the one that gets skipped: deciding what the problem actu
 
 ## The loop
 
-1. Pick a seed from the scenario bank (`references/scenarios.md`), using the selection rule in "Scenario bank" below.
+1. Pick a scenario using "Picking a scenario" below: check what this user has been served recently, then compose a setting, problem shape and mode that differ from it.
 2. Serve the scenario — five fields plus a flow diagram, **in the order of operations below**.
 3. The user commits to two questions and two actions. Wait for them. Do not answer your own scenario.
 4. Reveal the board — six ordered questions plus a decoy, four ordered actions. Mark any of theirs that hit. Then the three-part close.
@@ -25,6 +25,17 @@ The skill it trains is the one that gets skipped: deciding what the problem actu
 4. After the diagram renders, write the remaining fields in full: UX principle, the timeframe section (one-line handover, three facts, then the colleague's reading), the constraint, and the ask.
 
 The most common failure is opening with a tool call: the diagram lands at the top, Context never gets written, and the fields after the diagram get thinned out because the scenario already feels delivered. Before ending the turn, check that all five fields are present.
+
+### Written first is not the same as seen first
+
+What matters is the order the user *sees*, not the order you write. Some surfaces (the Claude app among them) fold any text written between tool calls into a collapsed work summary, so a Context paragraph written before the diagram call never appears and the diagram becomes the first visible thing. That is exactly the failure above, even though you followed steps 1–3.
+
+- If the session has a tool for sending a visible message mid-turn (for example `SendUserMessage`), send the **Context** paragraph and the **The flow** header through it, *then* make the diagram calls, then write the remaining fields as the final reply.
+- If any other tool work happens before or after serving (loading the skill, reading references, searching history), finish all of it first. Serving starts only when no tool call remains except the diagram.
+- If you can't tell whether pre-tool text will show, assume it won't and use the visible-message tool.
+- If no such tool exists and the surface collapses pre-tool text, put Context as the first line of the final reply, directly above the remaining fields, rather than skipping it.
+
+A quick check before ending the turn: scroll the reply as the user will see it. The first thing on screen must be the word **Context**.
 
 The ask, stated exactly this way: **two questions you'd ask, two actions you'd take.** No ranking, no order required. Some people will say their second action depends on what the first question turns up — that's a good answer, not a rule violation. Accept it.
 
@@ -251,12 +262,14 @@ Name the pattern whether or not the user found it. Scenario facts expire; a name
 
 ### Reference close
 
-> **Your hits: both first slots.** Your calendar question and your prototype both ask whether approval belongs at booking at all, which is the gap the principle points to. One note: the partners are off-limits until spring, so present the prototype as a proposal, not something you've tested.
+This uses the worked example at the end of this file, which is never served.
+
+> **Your hit: your first question.** Asking why owners shown a low estimate aren't coming goes straight at the branch where people fall out, and it refuses the PM's marketing reading before accepting it.
 >
-> **Question I'd have added (#2):** *"Is the agent slow, or waiting on something the app can't see?"*
-> Why: Thursday comes down to choosing between the two readings, and this decides which one you present. The interview finding already answers it, so it needs no new research.
+> **Action I'd have taken (#1):** *"Show what happens after you arrive instead of an urgency estimate."*
+> Why: legal blocks anything that implies an assessment, and this removes the assessment rather than rewording it, so it can go into the six-week review as a clean proposal.
 >
-> **The approval is in the wrong place.** When requests keep stalling at a sign-off, check whether that sign-off could happen once, earlier, when the options are set. To spot it, ask whether the approver ever saw the options before the user picked one.
+> **A rating is read as a verdict.** When an app shows a score before a professional has looked, people act on it as if it were the professional's call. To spot it, ask what a user would do differently if the number were hidden.
 
 ## Never grade
 
@@ -273,44 +286,60 @@ If the user wants to keep going, answer their question **as the world** rather t
 
 If the user wants to keep going past their two, let them. The two-and-two ask is a floor that gets them committed, not a cap on the conversation.
 
-## Scenario bank — how to pick
+## Picking a scenario — variety rules
 
-`references/scenarios.md` holds 30 seeds, each a different industry, mode and problem shape. Read it before serving. Without it, runs drift back to the same few defaults (approvals, cutoffs, queues), and the user notices within a week.
+The scenario is built from three independent axes, picked separately:
 
-**Selection rule.** You carry nothing between sessions, so pick by date:
-- Use today's date (from context, or a time tool if one exists) and take the day of the month as the seed number. On the 31st, pick any seed not served in this conversation.
-- Asked for another round in the same conversation → the next seed number, wrapping 30 → 1. Never serve a seed twice in one conversation.
-- If the user names an industry, pick the closest seed in it, or build a new one to the same standard.
+- **Setting** — the product and industry. `references/variety.md` holds a pool of 60.
+- **Problem shape** — what is actually wrong underneath. `references/variety.md` holds 23. This is what the user is practicing, so it matters most.
+- **Mode** — discovery, interpretation or commitment (see "Scenario modes" above).
 
-**Variation after a month.** The same seed comes back on the same date each month. Keep its shape and industry, and change the surface using the month number (1–12) mod 3:
-- **0:** as written.
-- **1:** new colleague name and role, holding the opposite reading of the evidence; swap which fact is the win.
-- **2:** switch the mode (discovery → interpretation → commitment → discovery) and write a new constraint that fits the new mode.
+Composing three axes gives well over a thousand combinations. The old rule (day of the month picks one of 30 fixed seeds) guaranteed the same scenario on the same date every month, and users noticed within weeks. Don't go back to it.
 
-Always rename the invented company and people, change the figures, and rewrite every sentence fresh. The seed is a skeleton, never copy to paste.
+### Step 1 — check what this user has already seen
 
-**Build from the seed, don't recite it.** The seed gives the plant, the keystone slots and the pattern. You still write all five fields, build the full board (six questions, a decoy, four actions) and draw the flow to the rules in this file.
+You carry nothing between sessions, but some surfaces can search past chats. If a past-chat search tool exists (for example `conversation_search` or `recent_chats`), use it before picking:
+
+- Search for the ask line, e.g. `"two actions you'd take"`, and if useful a second query like `design warmup scenario`. One or two searches, at most two chats opened. Don't page through history.
+- From the hits, note the **setting, shape and mode** of each round in roughly the last 30 days.
+- Avoid every setting from that list, avoid the shapes of the last five rounds, and use a different mode from the most recent round.
+
+This is read-only. Do not write a log to the user's memory unless they ask you to.
+
+Within one conversation, never repeat a setting or shape already served in it, and rotate the mode each round.
+
+### Step 2 — compose
+
+**With history**, pick any setting, shape and mode that pass the avoid-lists, favoring modes and shapes that have been served least.
+
+**Without history**, pick by date so consecutive days differ and the pairing doesn't recur on a monthly cycle. Let *N* be today's day of the year (1–366), from context or a time tool:
+- Setting: entry `((N × 7) mod 60) + 1` in the settings pool.
+- Shape: entry `((N × 5) mod 23) + 1` in the shapes list.
+- Mode: `N mod 3` → 0 discovery, 1 interpretation, 2 commitment.
+- If the setting and shape don't fit naturally, take the next shape down the list (wrapping) until one does. Never bend the setting into a cartoon to force a shape.
+- Asked for another round in the same conversation → step every index forward by one, skipping anything already served here.
+
+**If the user names an industry**, use it as the setting and still pick the shape and mode by the rules above.
+
+### Step 3 — make the surface new
+
+Invent the company name, the people, the figures and every sentence fresh. Nothing is copied from a reference file, including phrasing.
+
+**Never serve the examples the user has already read.** Pet urgent care check-in (the worked example in this file) and home-showing requests (featured in the README and the original bank) are off the table as settings. If a pick lands on either, move to the next setting.
+
+### The seed bank is a pattern library, not a menu
+
+`references/scenarios.md` holds 30 worked seeds. Read it to see how a shape turns into a plant, a keystone question and a named pattern. Don't serve a seed as written. If your composed setting and shape match a seed, you may borrow its plant and keystones, but change the colleague, the constraint, the mode if possible, and every name and figure.
 
 ### Rotate the problem shape, not the industry
 
-Settings are unlimited. Distinct problem shapes are maybe thirty or forty, and the shape is what the user is actually practicing. Serving the same shape in three different industries makes someone very good at one thing while feeling like general practice.
-
-The bank already spreads shapes across the month, so the date-based pick does the rotating. When building a scenario outside the bank (a named industry, or overtime), pick a shape that differs from anything served earlier in this conversation:
-
-- A system took over a human judgment; the target metric improved and the cost landed where the metric can't see it
-- Two users share one interface and want opposite things
-- The workaround is the spec — people built something on the side and it's better than the product
-- Fixing the bottleneck just moved it downstream
-- The thing that actually works isn't sanctioned
-- Right diagnosis, wrong owner — you can't touch the part that's broken
-- It only works at the good sites, and nobody's asking why
-- The metric improved because the population changed, not the product
-- Success at onboarding created a load nobody staffed for
+Settings are unlimited. Distinct problem shapes are maybe thirty or forty, and the shape is what the user is actually practicing. Serving the same shape in three different industries makes someone very good at one thing while feeling like general practice. When the history check and the date pick disagree, protect shape variety first, then mode, then setting.
 
 ## Failure modes to avoid
 
 - **Opening with the diagram.** See Order of operations. Context text comes first, always.
-- **Repeating a scenario.** Use the bank and the selection rule.
+- **Repeating a scenario.** Run the history check when the tools exist, compose from the three axes, and never serve the worked example or a seed as written.
+- **Context the user never sees.** Text written before a tool call can be collapsed on some surfaces. See "Written first is not the same as seen first."
 - **A vague close.** Part 2 always says question or action, quotes the exact wording, and says why.
 - **Serving the scenario and the board together.** The commitment has to happen first or there's no exercise.
 - **Letting the constraint go unused.** If nothing in the scenario makes an obvious action hard, the constraint is decoration. It should change what the user can actually do, not just what they'd like to know.

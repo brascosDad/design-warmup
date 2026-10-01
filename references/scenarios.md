@@ -1,10 +1,12 @@
-# Scenario bank — 30 seeds
+# Seed bank — 30 worked examples
 
-One seed per day of the month. Each is a skeleton: build the full scenario from it (five fields, flow, full board) following SKILL.md. All companies and people are invented. Rename them and change the figures every time you serve a seed.
+A pattern library, not a menu. Each seed shows how a problem shape turns into a plant, a keystone question and action, and a named pattern. Scenarios are composed from the axes in `variety.md` using the rules in SKILL.md; never serve a seed as written. Seed 1 (showing requests) is off the table as a setting because users have already read it in the README and earlier rounds. All companies and people are invented.
 
 Modes: **D** discovery · **I** interpretation (research is in; the constraint closes the research door) · **C** commitment (the decision is made and announced).
 
 Each seed lists: product · mode · shape · colleague and their reading · three facts (at least one real win) · constraint · the planted gap · keystone question (Q1) · keystone action (A1) · pattern.
+
+When serving, the facts always come before the colleague's reading, whatever order the seed lists them in.
 
 ---
 

@@ -8,7 +8,7 @@ No Figma. No deliverable. No score.
 
 The skill it trains is the one that usually gets skipped: deciding what the problem actually is before solving anything.
 
-Includes a bank of 30 scenarios, so there's a new one every day of the month.
+Scenarios are composed from 60 settings, 23 problem shapes and 3 modes, and the skill checks your past rounds (where your Claude can search chat history) so it doesn't serve you the same story twice.
 
 ---
 
@@ -59,10 +59,21 @@ Then ask for a design warmup, a design exercise, or a scenario to think through.
 | File | What it is |
 |---|---|
 | [`SKILL.md`](SKILL.md) | The skill — modes, the five scenario fields, the flow spec, the board, the rules |
-| [`references/scenarios.md`](references/scenarios.md) | 30 scenario seeds, one for each day of the month |
+| [`references/variety.md`](references/variety.md) | 60 settings and 23 problem shapes that scenarios are composed from |
+| [`references/scenarios.md`](references/scenarios.md) | 30 worked seeds — a pattern library showing how a shape becomes a scenario |
 | [`RATIONALE.md`](RATIONALE.md) | Why it's shaped this way, and what got cut. Read this one if you only read one. |
 
-`SKILL.md` is a generator, not a set of examples. The bank gives it 30 starting points, and the rules turn each one into a fresh round. That's why it's a skill and not a blog post.
+`SKILL.md` is a generator, not a set of examples. The pools give it the raw material, the seed bank shows what good looks like, and the rules turn each pick into a fresh round. That's why it's a skill and not a blog post.
+
+---
+
+## Changelog
+
+**October 2026**
+- Variety: scenarios are now composed from three axes (setting, problem shape, mode) instead of mapping the day of the month to one of 30 fixed seeds, which served the same story on the same date every month. New `references/variety.md` holds the pools.
+- History check: where past-chat search exists, the skill looks at your recent rounds and avoids their settings, shapes and mode.
+- Context first, as seen: on surfaces that collapse text written before a tool call, Context and the flow header go out as a visible message before the diagram, so the round never opens on the picture.
+- The examples you've already read (pet urgent care, showing requests) are never served.
 
 ---
 

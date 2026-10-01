@@ -202,13 +202,23 @@ Settings are unlimited. Problem shapes are maybe thirty or forty, and the shape 
 
 ---
 
-## Thirty seeds, one for each day
+## Three axes, not thirty seeds
 
 Left to generate freely, the scenarios repeated. Insurance-claim auto-approval and ordering cutoffs kept coming back. A generator with no memory falls back on its favorite examples, and you notice fast.
 
-So there's a bank of thirty seeds, each a different industry, mode and problem shape: showing requests in real estate, self-checkout alerts at a grocery store, bus tracking for a school district. A seed is a skeleton. It has the planted gap, the keystone question and action, and the pattern. The skill still writes every field fresh, renames everyone and changes the numbers.
+The first fix was a bank of thirty seeds, picked by date: the day of the month was the seed number. That stopped the drift and created a new problem. The same story came back on the same date every month, and within a few weeks the showing-request scenario on the 1st felt like a rerun, whatever surface changes it got.
 
-The pick goes by date: the day of the month is the seed number. Claude remembers nothing between sessions, so the calendar handles rotation. When a seed comes back the next month, its surface changes: a colleague with the opposite reading, a different mode, a new constraint. The shape stays the same, because the shape is what you're practicing.
+So the bank became a pattern library, and scenarios are now composed from three axes picked separately: a setting from a pool of sixty, a problem shape from a list of twenty-three, and a mode. That's well over a thousand combinations, and the date math is chosen so the same pairing doesn't recur on a monthly cycle.
+
+Where Claude can search past chats, it checks first: what settings, shapes and modes did you see in the last month? It avoids those. That's the closest thing to memory a session has, and it's read-only.
+
+The examples printed in this repo are never served. You've already read them, and a scenario you recognize is a scenario you answer from memory instead of judgment.
+
+---
+
+## Context has to be seen first, not just written first
+
+The rule was always text first, then the diagram. It turned out not to be enough. Some surfaces fold text written before a tool call into a collapsed work summary, so the Context paragraph existed and nobody saw it, and the round opened on the picture. The fix is to send Context through a visible-message tool before drawing, and to check the reply as the user will see it.
 
 ---
 
