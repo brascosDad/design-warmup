@@ -6,7 +6,9 @@ Modes: **D** discovery · **I** interpretation (research is in; the constraint c
 
 Each seed lists: product · mode · shape · colleague and their reading · three facts (at least one real win) · constraint · the planted gap · keystone question (Q1) · keystone action (A1) · pattern.
 
-When serving, the facts always come before the colleague's reading, whatever order the seed lists them in.
+When serving, the facts always come before the colleague's reading, whatever order the seed lists them in. Serve only two of the three facts: the two that pull hardest against each other. The plant and Q1 become format B's primary find; A1 becomes the keystone action, or the keystone candidate among format C's five moves.
+
+Modes and formats are separate: the **C** above is commitment mode, not format C.
 
 ---
 

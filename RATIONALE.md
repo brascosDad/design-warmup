@@ -1,6 +1,6 @@
 # Rationale
 
-The exercise: read a made-up product scenario, then commit to two questions you'd ask and two actions you'd take. Five minutes. No Figma, no deliverable. A board comes back with the strongest questions and actions, and any of yours that hit are marked.
+The exercise: read a short made-up product scenario and answer it in one of two formats — find the one thing that doesn't add up and give one action, or pick the strongest of five candidate moves, call the decoy and add one of your own. Five to ten minutes. No Figma, no deliverable. A board comes back with what the scenario was built around, any of yours that hit are marked, and the round ends with an optional extra credit: say it to the person in the room.
 
 Everything below is a decision made deliberately, usually after a version that didn't work.
 
@@ -16,17 +16,35 @@ So the board compares, it doesn't score. Hitting any entry is a hit. Hitting non
 
 ---
 
-## Two questions, two actions
+## From two-and-two to two formats
 
-The obvious version asks for every question you'd want to ask. It's worse. Listing is easy — you write eight, none of them cost anything, and you never have to decide.
+The ask used to be two questions you'd ask and two actions you'd take.
 
-The other extreme, exactly one question, was too tight. It made the whole thing feel like a single shot you could waste.
+It was the right shape for a while. Listing everything you'd want to know is easy and teaches nothing; exactly one question felt like a single shot you could waste. Two and two was tight enough that you had to choose. And the actions were there for a reason: constraints don't change what you'd want to *know*, they change what you can do.
 
-Two and two holds. Enough room that you're not agonizing, tight enough that you're choosing. And it's symmetrical, which matters more than it should — it's the version people repeat without looking it up.
+Then I stopped opening it. Not because it was bad — the rounds were engrossing — but because they took longer than a warmup should. Four answers, and each action had to squeeze past the constraint, so each one was a small design problem of its own. A warmup that costs twenty minutes of real thinking turns into homework, and homework gets skipped.
 
-The actions are there for a specific reason. Constraints don't change what you'd want to *know*; they change what you can actually do. Drop the actions and the constraint becomes decoration.
+The fix was to give it a puzzle's shape: something findable, a clear finish line, a moment where it clicks. That cuts against an old line further down this file about not being a puzzle, and the difference is grading. The scenario already plants specific things on purpose. Making the plant the target gives you the click without ever marking anyone wrong.
 
-An action is not a solution. "Interview the people who left" isn't a design. It's the next move, and picking a good one under a real constraint is the senior skill.
+I tried two versions and couldn't choose, so the skill serves both, at random.
+
+**Format B — Find it.** "What's the one thing here that doesn't add up?" Then one action, based on what you found. The answer is a plant: the undefined metric, the threshold sitting in plain sight, the number measured on the wrong people. It trains noticing, and the one action keeps the constraint doing real work.
+
+**Format C — Pick, then write.** Five candidate moves, shuffled, the decoy among them. Pick the strongest, call the decoy, then write one move of your own. It's recognition over recall: you process options and weigh trade-offs instead of generating from a blank page, which is faster and closer to how a lot of real decisions get made. The catch is that recognizing a good move trains less than coming up with one, which is why the move you write yourself never gets dropped. In practice it's where the most interesting thinking shows up.
+
+Random matters more than it sounds. You can't settle into one way of reading a scenario if you don't know which question is coming. You can still ask for one by name when you know you only have five minutes, or feel like writing.
+
+---
+
+## Extra credit: say it to the room
+
+Every round ends with one optional prompt: write the two sentences you'd say to the colleague in the scenario — the dean, the claims director, the ops lead — that tell them their fix is wrong without making them feel wrong.
+
+It came out of a round where the analysis was done and the most useful minute was what came after: turning a finding into something you could say to a person who'd already committed to the other reading. That's a separate skill from diagnosis, and it's the one that decides whether the diagnosis goes anywhere.
+
+The feedback is deliberately small. One catch — accuracy first, because a stakeholder who knows the report will notice an overstated number before anything else — then tone. Then a tightened version that keeps your idea and your voice. No score, no second draft unless you ask.
+
+It's meant to feel a little uncomfortable. That's the rep.
 
 ---
 
@@ -40,9 +58,9 @@ I got this wrong twice before it worked.
 
 - "The team's OKR is to reduce time-to-exam" tells you what to optimize. Now everyone answers the same question.
 - "This landed on your desk Monday" has nobody attached to it. It reads as a slide, not a job.
-- "Your PM sends these over," then the numbers, then "She thinks the picker is working and the drop-off is a marketing problem. You're not sure." — this one works.
+- "Your PM sends these over," then the numbers, then "She thinks the picker is working and the drop-off is a marketing problem." — this one works.
 
-A named person with a stated position gives you something to disagree with. It also keeps the best first move available: *is this even the problem?*
+A named person with a stated position gives you something to disagree with. It also keeps the best first move available: *is this even the problem?* And it gives the extra credit someone to talk to.
 
 The order matters too. Putting the opinion ahead of the numbers had you weighing someone's take on evidence you hadn't read yet, and it framed the facts before you got to them. So the numbers come first and the reading follows. You form your own impression, then meet the position you're being asked to agree or disagree with.
 
@@ -62,11 +80,11 @@ So there are three modes, and they rotate.
 
 ---
 
-## The board has two halves
+## The board fits the format
 
-Six questions, four actions.
+In format B, four finds and four actions. In format C, the five candidates re-ranked, with your own move slotted in where it earns. (The original board was six questions and four actions; the finds replaced the questions when the ask changed.)
 
-Four actions rather than six because a working constraint leaves genuinely fewer legitimate moves. That asymmetry doubles as a build-time check: **if you can't fill four distinct actions, the scenario is underspecified.** The user doesn't have enough to move on, and every action will collapse into another study.
+Actions stay at four because a working constraint leaves genuinely fewer legitimate moves. That asymmetry doubles as a build-time check: **if you can't fill four distinct actions, the scenario is underspecified.** The user doesn't have enough to move on, and every action will collapse into another study.
 
 Second check, learned the hard way: if every action on the board is a study, you've built a discovery scenario whether you meant to or not.
 
@@ -74,7 +92,7 @@ Second check, learned the hard way: if every action on the board is a study, you
 
 ## What the board actually is
 
-Not crowd data, and not the six best questions a designer could ask. **They're the questions the scenario was built around.**
+Not crowd data, and not the best answers a designer could give. **They're the plants the scenario was built around.**
 
 Constructing a scenario means planting the evidence that reveals the problem — the branch where people fall out, the metric measured on the wrong population, the threshold sitting in plain sight. Each planted thing is a board slot. The board is the list of what got buried and where.
 
@@ -86,9 +104,9 @@ The cost is circularity — a board can only contain what its author thought of,
 
 ## The decoy
 
-One entry is a decoy: the move a stakeholder in the scenario has already endorsed. It isn't a bad question. It's a borrowed one, and that's what makes it hard to see. Someone with authority has already said it out loud, so it feels like progress. The evidence or the constraint quietly undercuts it.
+One entry is a decoy: the move a stakeholder in the scenario has already endorsed. It isn't a bad idea. It's a borrowed one, and that's what makes it hard to see. Someone with authority has already said it out loud, so it feels like progress. The evidence or the constraint quietly undercuts it.
 
-It's there because that failure has nothing to do with knowledge. Six good questions don't make the pattern visible. Labeling one does.
+It's there because that failure has nothing to do with knowledge. Six good answers don't make the pattern visible. Labeling one does.
 
 I'm not certain about it. It works alone, where nobody has to own the decoy but you. It would not work on a public board built from other people's answers — marking a real person's contribution as the bad one is exactly the feeling this thing exists to avoid. Solo only. If it doesn't earn its place, cut it.
 
@@ -96,7 +114,7 @@ I'm not certain about it. It works alone, where nobody has to own the decoy but 
 
 ## The board is ordered
 
-Slot 1 in each group is the keystone: the question or move that unlocks the most, given the constraint. The rest follow in order of what they open up.
+Slot 1 in each group is the keystone: the find or move that unlocks the most, given the constraint. The rest follow in order of what they open up.
 
 An unordered board treats every entry as equal, and they aren't. Some questions open the whole scenario and some tidy up a corner. Ordering it tells you where the weight was without turning it into a score. Any hit is still a hit.
 
@@ -106,9 +124,9 @@ An unordered board treats every entry as equal, and they aren't. Some questions 
 
 After the board, the round closes in three parts, always in the same order.
 
-**Your hit first.** The strongest thing you said that landed, and why it mattered: the plant it found, the principle it tested, the assumption it refused. If nothing landed, the closest one, and what it was reaching toward. You committed to something, so you hear about it before anything else.
+**Your hit first.** The strongest thing you said that landed — a find, a pick, a decoy call, an action — and why it mattered: the plant it found, the principle it tested, the assumption it refused. If nothing landed, the closest one, and what it was reaching toward. You committed to something, so you hear about it before anything else.
 
-**Then the top slot you didn't get.** Question or action, said plainly which. The exact wording, then why it unlocks something under this constraint. If you got the top slot in both groups, it's the second one instead.
+**Then the top slot you didn't get.** Find, action or move, said plainly which. The exact wording, then why it unlocks something under this constraint. If you got the top slot in both groups, it's the second one instead.
 
 An earlier version ended with a loose line or two about what else I'd have pulled. It was too vague to act on. Was it a question or a move? What would it have opened? A thread you can't pick up isn't worth handing over. Naming one entry, quoting it, and saying why turns it into something to try next time. It reads like a colleague comparing notes on the way out of a meeting, not a list of what you missed.
 
@@ -132,11 +150,11 @@ The line I hold: **undefined, not incorrect.** A wrong fact makes you distrust e
 
 ---
 
-## Three facts, not five
+## Two facts, not five
 
 Early scenarios carried five or six data points. This is usually read on a phone with nothing to write on, and a scenario you can't hold in your head becomes an exercise in scrolling.
 
-Three is enough to create tension. The fourth is usually me showing my work.
+Three held for a long time. Cutting to two came with the shorter formats: a five-minute round can't afford a third fact, and two that pull against each other — a real win and a real cost — are enough to make it a judgment call. If a scenario needs a third to work, the plant is in the wrong place.
 
 ---
 
@@ -146,7 +164,7 @@ Three is enough to create tension. The fourth is usually me showing my work.
 
 **Your role and title.** Cut, with a correction. Seniority doesn't change the exercise. *Permission* does — whether you can walk into the founder's office or have to build a case over six weeks completely changes what a good action is. So the field went away and permission moved into the constraint, where it belonged.
 
-**The second design principle.** Scenarios used to state two. Two lets you skip both. One principle, chosen because it's the one the scenario quietly violates, makes ignoring it a visible choice.
+**The stated design principle.** Scenarios used to state two. Two let you skip both, so it went to one, chosen because it's the one the scenario quietly violates. Then the shorter formats cut it as a field too: a stated principle hands you half the answer and costs reading time. It's still there, built into the plant, and it usually comes back as the named pattern at the close.
 
 ---
 
@@ -186,7 +204,7 @@ If you keep going past the board, you can ask your questions and get answers —
 
 Not every answer advances the plot. Real ones don't. Sometimes the number you asked for is only measured on the population that didn't have the problem, and nobody can tell you about the rest. If every question moves things forward, it stops being a scenario and becomes a puzzle — and puzzles have a right answer you can miss.
 
-That's also why it isn't called a puzzle.
+That's why the overtime isn't a puzzle, even though the round itself now has a puzzle's shape. The find has an answer; what happens after it doesn't.
 
 ---
 
